@@ -1,0 +1,26 @@
+[build-system]
+requires = ["maturin>=0.14,<0.15"]
+build-backend = "maturin"
+
+[tool.maturin]
+name = "bustapi"          # ✅ Python module name
+bindings = "pyo3"
+
+[project]
+name = "bustapi"
+version = "0.1.0"
+authors = [{ name = "GrandmaEJ" }]
+description = "BustAPI: tiny FastAPI-like framework with Rust core exposed to Python"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+classifiers = [
+"Programming Language :: Python",
+"Programming Language :: Rust",
+"Programming Language :: Python :: 3",
+"Programming Language :: Python :: 3 :: Only",
+]
+
+
+[tool.maturin.target]
+# Produce manylinux/musllinux wheels as you prefer by passing flags on build.
